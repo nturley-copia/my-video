@@ -13,9 +13,3 @@ npm start
 ```console
 npm run build
 ```
-
-**Server render demo**
-
-```console
-npm run server
-```
