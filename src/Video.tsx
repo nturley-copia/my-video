@@ -1,6 +1,8 @@
-import { Composition } from 'remotion';
+import { Composition, Still } from 'remotion';
+import { Comrade } from './Comrade';
 import { GearPull } from './GearPull';
 import { SpinningLogo } from './SpinningLogo';
+import { Standby } from './Standby';
 import { StrokeAnimation } from './StrokeAnimation';
 
 export const RemotionVideo: React.FC = () => {
@@ -30,6 +32,20 @@ export const RemotionVideo: React.FC = () => {
         width={650}
         height={300}
       />
+      <Still
+      id="Standby"
+      component={Standby}
+      width={1024}
+      height={768}
+       />
+       <Composition
+        id="Comrade"
+        component={Comrade}
+        width={500}
+        height={500}
+        durationInFrames={120}
+        fps={30}
+       />
     </>
   );
 };
