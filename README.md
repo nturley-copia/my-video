@@ -8,7 +8,7 @@
 npm start
 ```
 
-**Render video**
+**Render videos**
 
 ```console
 npm run build
