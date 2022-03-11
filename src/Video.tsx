@@ -1,6 +1,8 @@
 import { Composition, Still } from 'remotion';
 import { Comrade } from './Comrade';
 import { GearPull } from './GearPull';
+import { Poof } from './Poof';
+import { RetroMan } from './RetroMan';
 import { SpinningLogo } from './SpinningLogo';
 import { Standby } from './Standby';
 import { StrokeAnimation } from './StrokeAnimation';
@@ -46,6 +48,20 @@ export const RemotionVideo: React.FC = () => {
         durationInFrames={120}
         fps={30}
        />
+       <Still
+       id="retroman"
+       component={RetroMan}
+       width={800}
+       height={300}
+       />
+       <Composition
+        id="Poof"
+        component={Poof}
+        durationInFrames={180}
+        fps={30}
+        width={500}
+        height={158}
+      />
     </>
   );
 };
