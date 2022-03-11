@@ -1,6 +1,7 @@
 import { Composition, Still } from 'remotion';
 import { Comrade } from './Comrade';
 import { GearPull } from './GearPull';
+import { Lappy } from './Lappy';
 import { Poof } from './Poof';
 import { RetroMan } from './RetroMan';
 import { SpinningLogo } from './SpinningLogo';
@@ -61,6 +62,14 @@ export const RemotionVideo: React.FC = () => {
         fps={30}
         width={500}
         height={158}
+      />
+      <Composition
+        id="Lappy"
+        component={Lappy}
+        durationInFrames={210}
+        fps={30}
+        width={650}
+        height={300}
       />
     </>
   );
