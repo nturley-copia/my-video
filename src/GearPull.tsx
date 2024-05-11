@@ -2,7 +2,7 @@ import { Easing, interpolate, useCurrentFrame } from 'remotion';
 
 export const GearPull: React.FC = () => {
   const frame = useCurrentFrame();
-  const framesPerPhase = 90
+  const framesPerPhase = 180
   const phase = Math.floor(frame / framesPerPhase)
   const phaseRange = [framesPerPhase * phase, (phase + 1) * framesPerPhase]
   let opacity = 1
@@ -10,9 +10,9 @@ export const GearPull: React.FC = () => {
   if (phase == 3) opacity = interpolate(frame, phaseRange, [1,0])
 
   let textX = 0
-  if (phase == 0) textX = 400
-  if (phase ==1) textX = interpolate(frame, phaseRange, [400,0])
-  if (phase == 3) textX = interpolate(frame, phaseRange, [0,400])
+  if (phase == 0) textX = 500
+  if (phase ==1) textX = interpolate(frame, phaseRange, [500,0])
+  if (phase == 3) textX = interpolate(frame, phaseRange, [0,500])
   let rot = 0
   if (phase ==1) rot = interpolate(frame, phaseRange, [0,-540])
   if (phase ==3) rot = interpolate(frame, phaseRange, [0, 540])
@@ -23,8 +23,8 @@ export const GearPull: React.FC = () => {
 
 
 
-  return <div style={{ backgroundColor: 'black', width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-    <svg viewBox="-30 -35 220 215" width="250" height="250" style={{ marginRight: '20px', opacity:opacity }}><defs>
+  return <div style={{ backgroundColor: 'black', width: '100%', display: 'flex', alignItems: 'normal', justifyContent: 'right' }}>
+    <svg viewBox="-30 -35 220 215" width="100" height="100" style={{ marginRight: '20px' }}><defs>
       <g id="green" transform={`rotate(${rot}, 59, 99)`}>
         <rect width="118" height="118" x={0} y={40}/>
       </g>
@@ -47,7 +47,7 @@ export const GearPull: React.FC = () => {
         <use href="#black" fill="#05a595" opacity={1}></use>
       </g>
     </svg>
-    <svg width="400" height="74" fill="none" viewBox="-1 -1 400 75">
+    <svg width="200" height="74" fill="none"  style={{paddingTop:'20px'}} viewBox="-1 -1 400 75">
       <g transform={`translate(${textX}, 0)`}>
         <path
           stroke="#fff"

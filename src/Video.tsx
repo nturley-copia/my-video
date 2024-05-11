@@ -22,18 +22,18 @@ export const RemotionVideo: React.FC = () => {
       <Composition
         id="StrokeAnimation"
         component={StrokeAnimation}
-        durationInFrames={300}
+        durationInFrames={600}
         fps={30}
-        width={500}
-        height={158}
+        width={800}
+        height={500}
       />
       <Composition
         id="GearPull"
         component={GearPull}
-        durationInFrames={360}
+        durationInFrames={720}
         fps={30}
-        width={650}
-        height={300}
+        width={800}
+        height={500}
       />
       <Still
       id="Standby"
@@ -44,7 +44,7 @@ export const RemotionVideo: React.FC = () => {
        <Composition
         id="Comrade"
         component={Comrade}
-        width={500}
+        width={800}
         height={500}
         durationInFrames={120}
         fps={30}
@@ -66,10 +66,10 @@ export const RemotionVideo: React.FC = () => {
       <Composition
         id="Lappy"
         component={Lappy}
-        durationInFrames={210}
+        durationInFrames={800}
         fps={30}
-        width={650}
-        height={300}
+        width={800}
+        height={500}
       />
     </>
   );

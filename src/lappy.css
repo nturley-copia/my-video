@@ -43,8 +43,9 @@ pointer-events: none;
 }
 
 pre {
-  margin-top: 50px;
+  margin-top: 20px;
   margin-left: 20px;
+  font-size: 12px;
 }
 
 .flicker {
